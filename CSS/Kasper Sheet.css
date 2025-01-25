@@ -4,6 +4,8 @@
    --transparent-color: rgb(15 116 143/70%);
    --second-color: #6599FF;
    --fourth-color: #E6E6E6;
+   --paragraph-head: #777;
+   --section-padding: 100px;
    --line-high: 1.5;
    --time-transition: 0.3s;
 }
@@ -25,7 +27,6 @@ html {
 
 body {
    font-family: "Open Sans", sans-serif;
-   background-color: black;
 }
 
 ul {
@@ -63,6 +64,52 @@ ul {
 
 /* End Global Rules */
 /* Start Componants */
+.main-heading {
+   text-align: center;
+}
+
+.main-heading h2 {
+   font-weight: normal;
+   font-size: 40px;
+   margin-bottom: 70px;
+   text-transform: uppercase;
+   position: relative;
+}
+
+.main-heading h2::before {
+   content: "";
+   position: absolute;
+   left: 50%;
+   width: 120px;
+   height: 2px;
+   transform: translateX(-50%);
+   background-color: #333;
+   bottom: -30px;
+}
+
+.main-heading h2::after {
+   content: "";
+   position: absolute;
+   left: 50%;
+   bottom: -38px;
+   /* bottom = 30 same as before + 
+   half of width + 1 */
+   transform: translateX(-50%);
+   width: 14px;
+   height: 14px;
+   background-color: white;
+   border: 3px solid #333;
+   border-radius: 50%;
+}
+
+.main-heading p {
+   color: var(--paragraph-head);
+   width: 550px;
+   font-weight: 500px;
+   margin: 0 auto 100px;
+   max-width: 90%;
+   line-height: var(--line-high);
+}
 
 /* End Componants */
 /* Start Header */
@@ -270,3 +317,50 @@ header nav .form i {
 }
 
 /* End Landing */
+/* Start Services */
+.services {
+   padding: var(--section-padding) 0;
+}
+
+@media (min-width:767px) {
+   .services-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+      gap: 50px 90px;
+   }
+}
+
+.services-content .box {
+   display: flex;
+}
+
+.services-content .box i {
+   font-size: 40px;
+   margin-top: 20px;
+   margin-right: 80px;
+}
+
+@media (max-width:767px) {
+   .services-content .box {
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 30px;
+   }
+
+   .services-content .box i {
+      margin: 20px 0px;
+   }
+}
+
+.services-content .box h3 {
+   font-weight: 800;
+   color: var(--main-color);
+   margin-bottom: 20px;
+}
+
+.services-content .box p {
+   line-height: var(--line-high);
+   color: var(--paragraph-head);
+}
+
+/* End Services */
