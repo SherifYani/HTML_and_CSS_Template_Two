@@ -435,5 +435,90 @@ header nav .form i {
    top: 1px;
 }
 
-
 /* End Design */
+/* Start Portfolio */
+.portfolio {
+   padding: var(--section-padding) 0px;
+}
+
+.portfolio .filters {
+   display: flex;
+   justify-content: center;
+}
+
+.portfolio .filters li {
+   text-transform: uppercase;
+   padding: 10px;
+}
+
+.portfolio ul li.active {
+   color: white;
+   background-color: var(--main-color);
+}
+
+.portfolio .images-holder {
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
+   margin-top: var(--section-padding);
+}
+
+.portfolio .images-holder .holder {
+   position: relative;
+   overflow: hidden;
+}
+
+.portfolio .images-holder .holder:hover .caption {
+   bottom: 0;
+}
+
+.portfolio .images-holder .holder:hover img {
+   transform: rotate(3deg) scale(1.1);
+}
+
+@media (min-width:768px) {
+   .portfolio .images-holder .holder {
+      flex-basis: 50%;
+   }
+}
+
+@media (min-width:1199px) {
+   .portfolio .images-holder .holder {
+      flex-basis: 25%;
+   }
+}
+
+.portfolio .images-holder .holder img {
+   max-width: 100%;
+   transition: var(--time-transition);
+}
+
+.portfolio .images-holder .holder .caption {
+   position: absolute;
+   background-color: white;
+   width: 100%;
+   font-size: 18px;
+   padding: 20px;
+   bottom: -100%;
+   transition: var(--time-transition);
+}
+
+.portfolio .images-holder .holder .caption h4 {
+   font-weight: normal;
+   margin-bottom: 10px;
+}
+
+.portfolio .images-holder .holder .caption p {
+   color: var(--main-color);
+}
+.portfolio .more{
+   display: block;
+   color: white;
+   padding: 10px;
+   margin: 30px auto;
+   width: fit-content;
+   background-color: var(--main-color);
+   text-decoration: none;
+   text-transform: uppercase;
+}
+/* End Portfolio */
