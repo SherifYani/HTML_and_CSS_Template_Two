@@ -1016,6 +1016,7 @@ header nav .form i {
    width: 150px;
    padding: 10px 20px;
    text-transform: uppercase;
+   cursor: pointer;
    border: 1px solid white;
    border-left: none;
    background-color: var(--main-color);
@@ -1041,3 +1042,96 @@ header nav .form i {
 }
 
 /* End subscribe */
+/* Start Contant */
+.contact {
+   padding: var(--section-padding) 0px;
+}
+
+.contact .container .content {
+   display: flex;
+   justify-content: space-between;
+}
+
+@media (max-width:991px) {
+   .contact .container .content {
+      flex-direction: column;
+   }
+}
+
+.contact .container .content form {
+   flex-basis: 70%;
+}
+
+.contact .container .content form .main-input {
+   padding: 20px;
+   display: block;
+   border: 1px solid #ccc;
+   margin-bottom: 30px;
+   width: 100%;
+}
+
+.contact .container .content form .main-input:focus {
+   outline: none;
+}
+
+.contact .content textarea.main-input {
+   height: 200px;
+}
+
+.contact .container .content form input[type="submit"] {
+   background-color: var(--main-color);
+   color: white;
+   padding: 20px;
+   border: none;
+   display: flex;
+   margin-left: auto;
+   text-transform: uppercase;
+   cursor: pointer;
+}
+
+.contact .container .content .info {
+   flex-basis: 25%;
+}
+
+@media (max-width:991px) {
+   .contact .container .content .info {
+      order: -1;
+      text-align: center;
+   }
+}
+
+.contact .container .content .info h4 {
+   text-transform: uppercase;
+   margin-bottom: 20px;
+   font-weight: 500;
+   font-size: 20px;
+}
+
+.contact .container .content .info .phone {
+   display: block;
+   color: var(--paragraph-head);
+   margin-bottom: 10px;
+}
+
+.contact .container .content .info h4:last-of-type {
+   margin-top: 75px;
+}
+
+@media (max-width:991px) {
+   .contact .container .content .info h4:last-of-type {
+      margin-top: 30px;
+   }
+}
+
+.contact .container .content .info address {
+   color: var(--paragraph-head);
+   line-height: 2;
+}
+
+@media (max-width:991px) {
+   .contact .container .content .info address {
+      margin-bottom: 30px;
+   }
+}
+
+/* End Contant */
